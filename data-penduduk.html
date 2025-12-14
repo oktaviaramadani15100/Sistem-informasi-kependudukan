@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Penduduk </title>
+    <link rel="stylesheet" href="css/penduduk.css">
+</head>
+
+<body id="body">
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="img/logo.png" class="logo">
+            <div class="nav-title">
+                <h3>Kelurahan Bogor</h3>
+                <span>Kota Bogor</span>
+            </div>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Profile Desa</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="#">Program Desa</a></li>
+            <li><a href="#">Data Penduduk</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Data Penduduk</h1>
+            <p>Kelola dan input data kependudukan warga secara terpusat</p>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Jumlah Penduduk</h3>
+                <p class="stat-number" id="totalPenduduk">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Jenis Kelamin</h3>
+                <p class="stat-desc" id="genderStat">L: 0 | P: 0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Kartu Keluarga</h3>
+                <p class="stat-number" id="totalKK">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Status Pernikahan</h3>
+                <p class="stat-desc" id="statusNikah">-</p>
+            </div>
+        </section>
+
+
+        <section class="form-card">
+            <h2>Input Data Penduduk</h2>
+
+            <form class="penduduk-form" id="pendudukForm">
+
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <div class="form-group">
+                    <label>NIK</label>
+                    <input type="text" id="nik" placeholder="Masukkan NIK" required>
+                </div>
+
+                <div class="form-group">
+                    <label>No. Kartu Keluarga</label>
+                    <input type="text" id="kk" placeholder="Nomor KK" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <select id="jk" required>
+                        <option value="">Pilih</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Status Pernikahan</label>
+                    <select id="statusNikahInput" required>
+                        <option value="">Pilih</option>
+                        <option>Kawin</option>
+                        <option>Belum Kawin</option>
+                        <option>Cerai</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Pendidikan</label>
+                    <select id="pendidikan">
+                        <option>Pilih</option>
+                        <option>SD</option>
+                        <option>SMP</option>
+                        <option>SMA</option>
+                        <option>Diploma</option>
+                        <option>Sarjana</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Pekerjaan</label>
+                    <input type="text" id="pekerjaan" placeholder="Contoh: Karyawan Swasta">
+                </div>
+
+                <button type="submit" class="btn-submit">Simpan Data</button>
+            </form>
+        </section>
+
+        <section class="table-card">
+            <div class="table-header">
+                <h2>Daftar Penduduk</h2>
+
+                <input type="text" id="searchInput" class="search-box" placeholder="Cari data...">
+            </div>
+
+            <table class="penduduk-table">
+                <thead>
+                    <tr>
+                        <th>NIK</th>
+                        <th>Nama</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Pekerjaan</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        const body = document.body;
+        const form = document.getElementById("pendudukForm");
+        const tableBody = document.getElementById("tableBody");
+        const searchInput = document.getElementById("searchInput");
+        const totalPendudukEl = document.getElementById("totalPenduduk");
+        const genderStatEl = document.getElementById("genderStat");
+        const totalKKEl = document.getElementById("totalKK");
+        const statusNikahEl = document.getElementById("statusNikah");
+
+        function setRole(role) {
+            localStorage.setItem("role", role);
+            body.className = "role-" + role;
+        }
+
+        body.className = "role-" + (localStorage.getItem("role") || "penduduk");
+
+        function loadData(keyword = "") {
+            const allData = JSON.parse(localStorage.getItem("penduduk")) || [];
+            tableBody.innerHTML = "";
+
+            let laki = 0;
+            let perempuan = 0;
+            let kkSet = new Set();
+            let statusCount = {};
+
+            allData.forEach(p => {
+                if (p.jk === "Laki-laki") laki++;
+                if (p.jk === "Perempuan") perempuan++;
+                if (p.kk) kkSet.add(p.kk);
+
+                if (p.statusNikah) {
+                    statusCount[p.statusNikah] = (statusCount[p.statusNikah] || 0) + 1;
+                }
+            });
+
+            totalPendudukEl.textContent = allData.length;
+            genderStatEl.textContent = `L: ${laki} | P: ${perempuan}`;
+            totalKKEl.textContent = kkSet.size;
+
+            statusNikahEl.textContent =
+                Object.keys(statusCount).length
+                    ? Object.entries(statusCount).map(([k, v]) => `${k}: ${v}`).join(" | ")
+                    : "-";
+
+            const filteredData = allData.filter(p =>
+                (p.nik || "").toLowerCase().includes(keyword) ||
+                (p.nama || "").toLowerCase().includes(keyword) ||
+                (p.jk || "").toLowerCase().includes(keyword) ||
+                (p.pekerjaan || "").toLowerCase().includes(keyword)
+            );
+
+            filteredData.forEach(p => {
+                tableBody.innerHTML += `
+            <tr>
+                <td>${p.nik}</td>
+                <td>${p.nama}</td>
+                <td>${p.jk}</td>
+                <td>${p.pekerjaan || "-"}</td>
+            </tr>
+        `;
+            });
+        }
+
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const data = {
+                    nama: document.getElementById("nama").value,
+                    nik: document.getElementById("nik").value,
+                    kk: document.getElementById("kk").value,
+                    jk: document.getElementById("jk").value,
+                    statusNikah: document.getElementById("statusNikahInput").value,
+                    pendidikan: document.getElementById("pendidikan").value,
+                    pekerjaan: document.getElementById("pekerjaan").value
+                };
+
+                if (!data.nama || !data.nik || !data.kk || !data.jk) {
+                    alert("Lengkapi data wajib!");
+                    return;
+                }
+
+                let penduduk = JSON.parse(localStorage.getItem("penduduk")) || [];
+                penduduk.push(data);
+                localStorage.setItem("penduduk", JSON.stringify(penduduk));
+
+                form.reset();
+                loadData();
+            });
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener("keyup", function () {
+                loadData(this.value.toLowerCase());
+            });
+        }
+        loadData();
+    </script>
+
+</body>
+
+</html>
