@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kota Bogor</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+    }
+
+    /* ===== Header Foto ===== */
+    .header-img {
+        width: 100%;
+        height: 250px;
+        background: #ccc;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* ===== Sejarah ===== */
+    .container {
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+    }
+    .container img {
+        width: 45%;
+        border-radius: 5px;
+    }
+    .text-box {
+        width: 55%;
+    }
+    .text-box h3 {
+        margin-top: 0;
+    }
+
+    /* ===== Visi Misi Section ===== */
+    .visi-misi {
+        background: #4ea3a8;
+        color: white;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .visi, .misi {
+        width: 45%;
+    }
+    .visi-box {
+        border: 2px solid white;
+        padding: 15px;
+        border-radius: 3px;
+        width: 80%;
+    }
+
+    .btn-view {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #2167ff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    /* ===== Program Andalan ===== */
+    .section-title {
+        background: #77a8c5;
+        padding: 8px 15px;
+        width: fit-content;
+        margin: 40px 0 15px 20px;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+
+    .program-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .program-item {
+        text-align: center;
+    }
+    .program-item img {
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    /* ===== Galeri ===== */
+    .gallery-grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding-bottom: 50px;
+    }
+
+    .gallery-item {
+        text-align: center;
+    }
+    .gallery-item img {
+        width: 230px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER FOTO ===================== -->
+<div class="header-img" style="background-image:url('GANTI-DENGAN-GAMBAR-HEADER.jpg');"></div>
+
+
+<!-- ===================== SEJARAH ===================== -->
+<div class="container">
+    <img src="GAMBAR-SEJARAH.jpg" alt="Gambar Sejarah">
+
+    <div class="text-box">
+        <h3>Sejarah</h3>
+        <p>
+            Kota Bogor dahulu merupakan pusat Kerajaan Sunda bernama Pakuan Pajajaran pada abad ke-14 hingga 
+            16, dipimpin raja terkenal Prabu Siliwangi. Setelah kerajaan runtuh, wilayah ini sempat ditinggalkan 
+            hingga masa kolonial Belanda. Pada tahun 1752, Belanda mendirikan kota bernama Buitenzorg dan 
+            membangun Istana Bogor sebagai tempat peristirahatan.
+        </p>
+    </div>
+</div>
+
+
+<!-- ===================== VISI MISI ===================== -->
+<div class="visi-misi">
+    <div class="visi">
+        <h3>Visi</h3>
+        <div class="visi-box">
+            <p><b>"Bogor Beres – Bogor Maju"</b></p>
+        </div>
+    </div>
+
+    <div class="misi">
+        <h3>Misi</h3>
+        <ol>
+            <li>Mewujudkan Kota yang Sehat</li>
+            <li>Mewujudkan Kota yang Cerdas</li>
+        </ol>
+        <button class="btn-view">View All</button>
+    </div>
+</div>
+
+
+<!-- ===================== PROGRAM ANDALAN ===================== -->
+<div class="section-title">Program Andalan</div>
+
+<div class="program-wrapper">
+    <div class="program-item">
+        <img src="GAMBAR-POSYANDU.jpg" alt="Posyandu">
+        <p>POSYANDU</p>
+    </div>
+
+    <div class="program-item">
+        <img src="GAMBAR-GOGREEN.jpg" alt="Go Green">
+        <p>GO GREEN</p>
+    </div>
+
+    <div class="program-item">
+        <img src="GAMBAR-BANSOS.jpg" alt="Bansos">
+        <p>BANSOS</p>
+    </div>
+</div>
+
+
+<!-- ===================== GALERI ===================== -->
+<div class="section-title">Galeri</div>
+
+<div class="gallery-grid">
+
+    <div class="gallery-item">
+        <img src="GAMBAR-ALUNALUN.jpg" alt="Alun-Alun Bogor">
+        <p>Alun-Alun Kota Bogor</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="GAMBAR-SITUGEDE.jpg" alt="Situ Gede">
+        <p>Situ Gede</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="GAMBAR-KEBUNRAYA.jpg" alt="Kebun Raya">
+        <p>Kebun Raya</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="GAMBAR-PERPUSTAKAAN.jpg" alt="Perpustakaan">
+        <p>Perpustakaan dan Galeri Kota Bogor</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="GAMBAR-PUNCAK.jpg" alt="Puncak Bogor">
+        <p>Puncak Bogor</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="GAMBAR-CURUG.jpg" alt="Curug Bogor">
+        <p>Curug Bogor</p>
+    </div>
+
+</div>
+
+
+</body>
+</html>
