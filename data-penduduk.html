@@ -20,11 +20,11 @@
 
         <ul class="nav-menu">
             <li><a href="home.html">Home</a></li>
-            <li><a href="#">Profile Desa</a></li>
+            <li><a href="Profil_Kota_Bogor.html">Profile Desa</a></li>
             <li><a href="berita.html">Berita</a></li>
-            <li><a href="#">Program Desa</a></li>
-            <li><a href="#">Data Penduduk</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="program-desa.html">Program Desa</a></li>
+            <li><a href="data-penduduk.html">Data Penduduk</a></li>
+            <li><a href="login.html">Logout</a></li>
         </ul>
     </header>
 
@@ -34,7 +34,7 @@
             <p>Kelola dan input data kependudukan warga secara terpusat</p>
         </section>
 
-        <section class="stats-grid">
+        <section class="stats-grid" id="statsSection">
             <div class="stat-card">
                 <h3>Jumlah Penduduk</h3>
                 <p class="stat-number" id="totalPenduduk">0</p>
@@ -57,7 +57,7 @@
         </section>
 
 
-        <section class="form-card">
+        <section class="form-card" id="formSection">
             <h2>Input Data Penduduk</h2>
 
             <form class="penduduk-form" id="pendudukForm">
@@ -117,7 +117,7 @@
             </form>
         </section>
 
-        <section class="table-card">
+        <section class="table-card" id="tableSection">
             <div class="table-header">
                 <h2>Daftar Penduduk</h2>
 
@@ -236,6 +236,20 @@
             });
         }
         loadData();
+
+        const loginUser = JSON.parse(localStorage.getItem("loginUser"));
+
+        if (!loginUser) {
+            window.location.href = "login.html";
+        }
+
+        const statsSection = document.getElementById("statsSection");
+        const formSection = document.getElementById("formSection");
+
+        if (loginUser.role === "penduduk") {
+            if (statsSection) statsSection.style.display = "none";
+            if (formSection) formSection.style.display = "none";
+        }
     </script>
 
 </body>

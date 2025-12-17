@@ -20,11 +20,11 @@
 
         <ul class="nav-menu">
             <li><a href="home.html">Home</a></li>
-            <li><a href="#">Profile Desa</a></li>
+            <li><a href="Profil_Kota_Bogor.html">Profile Desa</a></li>
             <li><a href="berita.html">Berita</a></li>
-            <li><a href="#">Program Desa</a></li>
+            <li><a href="program-desa.html">Program Desa</a></li>
             <li><a href="data-penduduk.html">Data Penduduk</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="login.html">Logout</a></li>
         </ul>
     </header>
 
@@ -46,7 +46,391 @@
         <div class="img-berita">
             <img src="img/berita1.png" alt="">
         </div>
+        <div class="info">
+            <span>Bupati Bogor Akan Integrasi Setu Kabantenan Dan Setu Cikaret,
+                <br>Siapkan Destinasi Air Baru Untuk Masyarakat</span>
+        </div>
+        <button class="btn-selengkapnya" onclick="toggleBerita()">
+            Selengkapnya
+        </button>
+
+        <div class="detail-berita" id="detailBerita">
+            <p class="meta">
+                <strong>Press Release Diskominfo Kabupaten Bogor</strong><br>
+                Rabu, 3 Desember 2025
+            </p>
+
+            <p>
+                Cibinong- Bupati Bogor, Rudy Susmanto bersama jajaran perangkat daerah terkait yakni BPBD,<br> DPUPR,
+                dan DPKPP meninjau Setu Kabantenan dan Setu Cikaret dengan menyusuri area setu <br> menggunakan perahu
+                karet, pada Sabtu (6/12/25). Peninjauan ini dilakukan untuk melihat <br> langsung potensi setu sebagai
+                kesiapan rencana mengintegrasikan dua setu <br> tersebut sebagai satu kawasan wisata air yang
+                dapatdinikmati masyarakat.
+            </p>
+
+            <p>
+                Bupati Bogor Rudy Susmanto menjelaskan bahwa integrasi Setu Kabantenan dan Setu Cikaret <br>
+                tidak hanya berfungsi sebagai penampung air, pengendali banjir, maupun sumber pengairan <br>
+                pertanian. Lebih dari itu, kawasan ini memiliki keindahan alam yang selama ini tidak terlihat <br>
+                dan berpotensi besar sebagai ruang publik wisata air.
+            </p>
+
+            <button class="btn-kembali" onclick="toggleBerita()">Kembali</button>
+        </div>
     </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="info-section">
+                <h2>INFORMASI</h2>
+                <ul>
+                    <li onclick="showPengumuman()">PENGUMUMAN LAYANAN</li>
+                    <!-- <li>KEGIATAN DESA</li> -->
+                    <li onclick="showPosyandu()">JADWAL POSYANDU</li>
+                    <li onclick="showSosial()">INFO BANTUAN SOSIAL</li>
+                    <li onclick="showKegiatan()">INFO KEGIATAN MASYARAKAT</li>
+                </ul>
+            </div>
+
+            <div class="foto-wrapper">
+                <img src="img/Dedie.jpg" alt="Foto Kepala Desa">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main-container" id="pengumumanSection" style="display:none;">
+        <div class="header">
+            <h1>Pengumuman Layanan</h1>
+            <div class="header-content">
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <div class="subtitle">
+                    <p>Informasi Terbaru Mengenai Perubahan Jam Operasional</p>
+                    <p>Maintenance Sistem, Dan Layanan Baru Untuk Masyarakat.</p>
+                </div>
+                <img src="img/logo.png" alt="Logo" class="logo">
+            </div>
+        </div>
+
+        <div class="card-list">
+
+            <div class="card-informasi">
+                <h3>Perubahan Jam Pelayanan</h3>
+                <div class="date">12 Desember 2025</div>
+                <p>Mulai Tanggal 12 Februari 2025, Jam Pelayanan Administrasi Berubah Menjadi 08.00 - 15.00 WIB. Mohon
+                    Menyesuaikan Waktu Kunjungan.</p>
+            </div>
+
+            <div class="card-informasi">
+                <h3>Maintenance Sistem Antrian Online</h3>
+                <div class="date">Hari Ini</div>
+                <p>Sistem Antrian Online Sedang Dalam Pemeliharaan Hingga Pukul 17.00 WIB. Seluruh Pemohon Harap
+                    Melakukan Pendaftaran Langsung Di Loket.</p>
+            </div>
+
+            <div class="card-informasi">
+                <h3>Pembaruan Layanan Cetak Dokumen</h3>
+                <div class="date">10 Februari 2025</div>
+                <p>Kini Layanan Cetak Kartu Keluarga (KK) Dan KTP-El Dapat Dilakukan Di Kantor Desa Tertentu. Daftar
+                    Desa Tersedia Pada Menu Informasi Layanan.</p>
+            </div>
+
+            <div class="card-informasi">
+                <h3>Pengajuan Bantuan Sosial Dibuka</h3>
+                <div class="date">Sampai 30 Februari 2025</div>
+                <p>Pengajuan Bantuan Sosial Masyarakat Dibuka Sampai 30 Februari 2025. Syarat Dan Formulir Tersedia Pada
+                    Halaman 'Layanan Sosial'.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="posyandu-container" id="posyanduSection">
+        <div class="table-section">
+            <h2>Jadwal Posyandu Kabupaten Bogor</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Posyandu</th>
+                        <th>Lokasi</th>
+                        <th>Tanggal</th>
+                        <th>Waktu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Posyandu Pabuaran Cibinong</td>
+                        <td>Jalan Pabuaran</td>
+                        <td>6 Desember 2025</td>
+                        <td>07:00</td>
+                    </tr>
+                    <tr>
+                        <td>Posyandu Citeureup Cibinong</td>
+                        <td>Jalan Citeureup</td>
+                        <td>2 Desember 2025</td>
+                        <td>08:00</td>
+                    </tr>
+                    <tr>
+                        <td>Posyandu Parung Panjang</td>
+                        <td>Jalan Jeruk Raya</td>
+                        <td>7 Desember 2025</td>
+                        <td>08:00</td>
+                    </tr>
+                    <tr>
+                        <td>Posyandu Bojong Gede</td>
+                        <td>Jalan Kincir Air</td>
+                        <td>9 Desember 2025</td>
+                        <td>10:00</td>
+                    </tr>
+                    <tr>
+                        <td>Posyandu Gunung Putri</td>
+                        <td>Jalan Narogong</td>
+                        <td>20 Desember 2025</td>
+                        <td>09:00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="quote">"Bersama Posyandu, Kita Wujudkan Generasi Sehat dan Cerdas."</p>
+        </div>
+
+        <div class="gallery-section">
+            <img src="img/kegiatan1.jpg" alt="Kegiatan 1">
+            <img src="img/kegiatan2.png" alt="Kegiatan 2">
+            <img src="img/kegiatan3.png" alt="Kegiatan 3">
+            <img src="img/kegiatan4.png" alt="Kegiatan 4">
+        </div>
+    </div>
+
+    <div class="social-aid-container" id="sosialSection" style="display: none;">
+        <div class="announcement-header">
+            <div class="blue-bar">Informasi Bantuan Sosial</div>
+        </div>
+
+        <div class="aid-card">
+            <div class="aid-image-wrap">
+                <img src="img/bst.png" alt="BST">
+            </div>
+            <div class="aid-content">
+                <div>
+                    <h3>Bantuan Sosial Tunai (BST)</h3>
+                    <p><strong>Penyelenggara:</strong> Pemerintah Pusat / Kemensos</p>
+                    <p><strong>Manfaat:</strong> Bantuan tunai Rp 320.000,- per bulan selama periode tertentu.</p>
+                </div>
+                <div class="aid-footer">
+                    <span class="status-button">Pencairan sedang berlangsung</span>
+                </div>
+                <span class="admin-tag">oleh Admin</span>
+            </div>
+        </div>
+
+        <div class="aid-card">
+            <div class="aid-image-wrap">
+                <img src="img/beasiswa.png" alt="Beasiswa">
+            </div>
+            <div class="aid-content">
+                <div>
+                    <h3>Bantuan Pendidikan Bogor (Beasiswa)</h3>
+                    <p><strong>Penyelenggara:</strong> Pemkab Bogor (APBD)</p>
+                    <p><strong>Manfaat:</strong> Bantuan biaya sekolah/kuliah bagi warga tidak mampu.</p>
+                </div>
+                <div class="aid-footer">
+                    <span class="status-button">Pendaftaran dibuka</span>
+                </div>
+                <span class="admin-tag">oleh Admin</span>
+            </div>
+        </div>
+
+        <div class="aid-card">
+            <div class="aid-image-wrap">
+                <img src="img/pkh.png" alt="PKH">
+            </div>
+            <div class="aid-content">
+                <div>
+                    <h3>Program Keluarga Harapan (PKH)</h3>
+                    <p><strong>Penyelenggara:</strong> Kemensos</p>
+                    <p><strong>Manfaat:</strong> Bantuan bersyarat untuk keluarga sejahtera.</p>
+                    <p><strong>Sasaran:</strong> Ibu hamil, balita, anak sekolah, lansia, disabilitas.</p>
+                </div>
+                <div class="aid-footer">
+                    <span class="status-button">Pendaftaran dibuka</span>
+                </div>
+                <span class="admin-tag">oleh Admin</span>
+            </div>
+        </div>
+
+        <div class="aid-card">
+            <div class="aid-image-wrap">
+                <img src="img/blt.png" alt="BLT">
+            </div>
+            <div class="aid-content">
+                <div>
+                    <h3>Bantuan Langsung Tunai (BLT) Dana Desa</h3>
+                    <p><strong>Penyelenggara:</strong> Pemerintah Desa</p>
+                    <p><strong>Manfaat:</strong> Bantuan tunai bagi warga terdampak kemiskinan ekstrem.</p>
+                </div>
+                <div class="aid-footer">
+                    <span class="status-button">Pencairan sedang berlangsung</span>
+                </div>
+                <span class="admin-tag">oleh Admin</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bogor-container" id="kegiatanSection">
+        <div class="announcement-header-kegiatan">
+            <div class="blue-bar">Informasi Kegiatan Masyarakat</div>
+        </div>
+
+        <div class="activity-grid">
+            <div class="activity-row activity-row-1">
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="img/masyarakat1.png">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Penggalangan Dana Bantuan untuk Korban Bencana Sumatera</h3>
+                        <p><strong>Tanggal:</strong> 5 Desember 2025</p>
+                        <p><strong>Lokasi:</strong> Balai Walikota</p>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="img/masyarakat2.png">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Pemda Setempat Melakukan Imunisasi di Beberapa Kecamatan</h3>
+                        <p><strong>Tanggal:</strong> 20 Desember 2025</p>
+                        <p><strong>Lokasi:</strong> Kelurahan Masing-masing</p>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="img/masyarakat3.png">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Pencegahan Demam Berdarah</h3>
+                        <p><strong>Tanggal:</strong> 7 Desember 2025</p>
+                        <p><strong>Lokasi:</strong> Kelurahan Masing-masing</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="activity-row activity-row-2">
+
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="img/masyarakat4.png">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Senam Bersama Masyarakat di Balai Kota</h3>
+                        <p><strong>Tanggal:</strong> 10 Desember 2025</p>
+                        <p><strong>Lokasi:</strong> Balai Walikota</p>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="img/masyarakat5.png">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Kegiatan Go Green di Kawasan Bogor</h3>
+                        <p><strong>Tanggal:</strong> 9 Desember 2025</p>
+                        <p><strong>Lokasi:</strong> Cibinong, Caringin, Bojong Gede</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="news-container">
+        <div class="news-card">
+            <div class="news-image">
+                <img src="img/jambore.png" alt="Jambore Desa">
+            </div>
+            <div class="news-content">
+                <a href="https://bogorkab.go.id/berita/detail-berita/7ec1fef9-3d70-49a2-b149-86f693eb5685"><h3>Jambore Asosiasi Pemerintah Desa <br>Seluruh Indonesia Di Kabupaten Bogor</h3></a>
+                <p>
+                    Kegiatan Jambore ini digelar dengan tujuan memperkuat sinergi, kebersamaan, dan <br> penguatan peran
+                    desa
+                    sebagai fondasi pembangunan daerah. Bupati Bogor,Rudy <br>
+                    Susmanto, menyampaikan apresiasi atas kehadiran <br>
+                    seluruh peserta.
+                </p>
+                <span class="news-admin">oleh Admin</span>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="news-image">
+                <img src="img/masyarakat1.png" alt="Bencana Alam">
+            </div>
+            <div class="news-content">
+                <a href="https://bogorkab.go.id/berita/detail-berita/f79f3ce8-2048-4755-9072-72ffe51c76b4"><h3>Misi Kemanusiaan Membantu Warga Yang Terdampak Bencana Alam</h3></a>
+                <p>
+                    Pengiriman tim medis ini menjadi bentuk nyata kepedulian Pemerintah Kabupaten <br> Bogor dalam memberikan
+                    pertolongan bagi sesama di saat darurat.
+                </p>
+                <span class="news-admin">oleh Admin</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function toggleBerita() {
+            const detail = document.getElementById('detailBerita');
+            const btn = document.querySelector('.btn-selengkapnya');
+
+            if (detail.style.display === 'block') {
+                detail.style.display = 'none';
+                btn.style.display = 'inline-block';
+            } else {
+                detail.style.display = 'block';
+                btn.style.display = 'none';
+                detail.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function showPosyandu() {
+            hideAll();
+            document.getElementById('posyanduSection').style.display = 'flex';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showSosial() {
+            hideAll();
+            document.getElementById('sosialSection').style.display = 'flex';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showKegiatan() {
+            hideAll();
+            document.getElementById('kegiatanSection').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showPengumuman() {
+            hideAll();
+            document.getElementById('pengumumanSection').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function hideAll() {
+            const pengumuman = document.getElementById('pengumumanSection');
+            const posyandu = document.getElementById('posyanduSection');
+            const sosial = document.getElementById('sosialSection');
+            const kegiatan = document.getElementById('kegiatanSection');
+
+            if (pengumuman) pengumuman.style.display = 'none';
+            if (posyandu) posyandu.style.display = 'none';
+            if (sosial) sosial.style.display = 'none';
+            if (kegiatan) kegiatan.style.display = 'none'
+        }
+    </script>
 </body>
 
 </html>
