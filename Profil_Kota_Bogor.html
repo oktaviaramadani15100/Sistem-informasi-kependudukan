@@ -12,33 +12,52 @@
         background: #f7f7f7;
     }
 
-    /* ===== Header Foto ===== */
-    .header-img {
-        width: 100%;
-        height: 250px;
-        background: #ccc;
-        background-size: cover;
-        background-position: center;
-    }
+    
+.header {
+    padding: 15px 20px 10px; 
+}
 
-    /* ===== Sejarah ===== */
-    .container {
-        padding: 20px;
-        display: flex;
-        gap: 20px;
-    }
-    .container img {
-        width: 45%;
-        border-radius: 5px;
-    }
-    .text-box {
-        width: 55%;
-    }
-    .text-box h3 {
-        margin-top: 0;
-    }
+.header h2 {
+    margin: 0 0 5px 0;       
+    font-size: 18px;
+    font-weight: 600;
+}
 
-    /* ===== Visi Misi Section ===== */
+
+    
+.container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: stretch; 
+}
+.container img {
+    width: 45%;
+    height: 220px;          
+    object-fit: cover;
+    border-radius: 5px;
+}
+.text-box {
+    width: 55%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.text-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0; 
+}
+
+.text-box p {
+    font-size: 16px;     
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    text-align: justify;
+}
+    
     .visi-misi {
         background: #4ea3a8;
         color: white;
@@ -66,66 +85,151 @@
         cursor: pointer;
         border-radius: 4px;
     }
+.navbar {
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1f3c88;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 
-    /* ===== Program Andalan ===== */
-    .section-title {
-        background: #77a8c5;
-        padding: 8px 15px;
-        width: fit-content;
-        margin: 40px 0 15px 20px;
-        font-weight: bold;
-        border-radius: 4px;
-    }
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo {
+    width: 2rem;
+}
 
-    .program-wrapper {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin-bottom: 40px;
-    }
+.nav-title h3 {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-    .program-item {
-        text-align: center;
-    }
-    .program-item img {
-        width: 200px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-    }
+.nav-title span {
+    margin: 0;
+    color: #dce3ff;
+    font-size: 12px;
+}
 
-    /* ===== Galeri ===== */
-    .gallery-grid {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        padding-bottom: 50px;
-    }
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 5rem;
+}
 
-    .gallery-item {
-        text-align: center;
-    }
-    .gallery-item img {
-        width: 230px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-    }
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #9bbcff;
+}
+    
+.section-title {
+    background: #77a8c5;
+    padding: 6px 14px;
+    width: fit-content;
+    margin: 25px 0 8px 20px; 
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+.program-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+
+    max-width: 1150px;   
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.program-item {
+    width: 100%;        
+    text-align: center;
+}
+
+.program-item img {
+    width: 100%;        
+    height: 200px;      
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+    
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    max-width: 1150px;   
+    margin-left: 20px;   
+    margin-right: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;       
+    object-fit: cover;
+    border-radius: 6px;
+}
+
 </style>
 </head>
 <body>
+      <header class="navbar">
+        <div class="nav-left">
+            <img src="img/logo.png" class="logo">
+            <div class="nav-title">
+                <h3>Kelurahan Bogor</h3>
+                <span>Kota Bogor</span>
+            </div>
+        </div>
 
-<!-- ===================== HEADER FOTO ===================== -->
-<div class="header-img" style="background-image:url('GANTI-DENGAN-GAMBAR-HEADER.jpg');"></div>
+        <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Profile Desa</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="#">Program Desa</a></li>
+            <li><a href="#">Data Penduduk</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </header>
 
 
-<!-- ===================== SEJARAH ===================== -->
+<div class="header">
+    <h2>Kota Bogor</h2>
+    <div class="header-img" style="background-image:url('GANTI-DENGAN-GAMBAR-HEADER.jpg');"></div>
+</div>
+
+
+
+
 <div class="container">
-    <img src="GAMBAR-SEJARAH.jpg" alt="Gambar Sejarah">
+    <img src="img/Spot1.jpg" alt="Gambar Sejarah">
 
     <div class="text-box">
         <h3>Sejarah</h3>
@@ -139,7 +243,7 @@
 </div>
 
 
-<!-- ===================== VISI MISI ===================== -->
+
 <div class="visi-misi">
     <div class="visi">
         <h3>Visi</h3>
@@ -159,59 +263,59 @@
 </div>
 
 
-<!-- ===================== PROGRAM ANDALAN ===================== -->
+
 <div class="section-title">Program Andalan</div>
 
 <div class="program-wrapper">
     <div class="program-item">
-        <img src="GAMBAR-POSYANDU.jpg" alt="Posyandu">
+      <a href="https://share.google/images/REiVsYbKUCOmlIsFF"><img src="img/Spot2.jpg" alt="Posyandu"></a>
         <p>POSYANDU</p>
     </div>
 
     <div class="program-item">
-        <img src="GAMBAR-GOGREEN.jpg" alt="Go Green">
+      <a href=" https://www.its.ac.id/news/wp-content/uploads/sites/2/2017/11/Rektor-ITS-Prof-Joni-Hermana-melakukan-penanaman-bibit-pohon-sebagai-simbol-dimulainya-kegiatan-Go-Green-ITS-4.jpeg."><img src="img/Spot3.jpeg" alt="Go Green"></a>  
         <p>GO GREEN</p>
     </div>
 
     <div class="program-item">
-        <img src="GAMBAR-BANSOS.jpg" alt="Bansos">
+      <a href="https://share.google/images/6ZunXw7vF5qIpZYxE"><img src="img/Spot4.webp" alt="Bansos"></a>  
         <p>BANSOS</p>
     </div>
 </div>
 
 
-<!-- ===================== GALERI ===================== -->
+
 <div class="section-title">Galeri</div>
 
 <div class="gallery-grid">
 
     <div class="gallery-item">
-        <img src="GAMBAR-ALUNALUN.jpg" alt="Alun-Alun Bogor">
+      <a href="https://www.google.com/imgres?imgurl=https://img.inews.co.id/media/600/files/networks/2021/12/17/2c913_alun-alun.jpg&imgrefurl=https://bogor.inews.id/read/23770/alun-alun-kota-bogor-fasilitasnya-bikin-tercengang-begini-bentuknya&h=450&w=600&tbnid=R2P_f6VUFAsIQM&tbnh=194&tbnw=259&osm=1&lns_uv=1&source=lens-native&docid=rak3jpMpYbxpsM"><img src="img/Spot5.jpg" alt="Alun-Alun Bogor"></a>  
         <p>Alun-Alun Kota Bogor</p>
     </div>
 
     <div class="gallery-item">
-        <img src="GAMBAR-SITUGEDE.jpg" alt="Situ Gede">
+      <a href="https://share.google/images/MmoL31Qh58Ni9FJUb"><img src="img/Spot6.jpeg" alt="Situ Gede"></a>  
         <p>Situ Gede</p>
     </div>
 
     <div class="gallery-item">
-        <img src="GAMBAR-KEBUNRAYA.jpg" alt="Kebun Raya">
+      <a href="https://share.google/images/GFzxpRoYd4ZNI4sh7"><img src="img/Spot7.jpg" alt="Kebun Raya"></a>  
         <p>Kebun Raya</p>
     </div>
 
     <div class="gallery-item">
-        <img src="GAMBAR-PERPUSTAKAAN.jpg" alt="Perpustakaan">
+      <a href="https://share.google/images/zgt4HlqYEXSHyHcvM"><img src="img/Spot8.jpeg" alt="Perpustakaan"></a>  
         <p>Perpustakaan dan Galeri Kota Bogor</p>
     </div>
 
     <div class="gallery-item">
-        <img src="GAMBAR-PUNCAK.jpg" alt="Puncak Bogor">
+      <a href="https://share.google/images/OHaJDQXZfF9poGCtg"><img src="img/Spot9.webp" alt="Puncak Bogor"></a>  
         <p>Puncak Bogor</p>
     </div>
 
     <div class="gallery-item">
-        <img src="GAMBAR-CURUG.jpg" alt="Curug Bogor">
+      <a href="https://www.google.com/imgres?imgurl=https://asset.kompas.com/crops/1_AIT21DvVAGjnlsKj60FX7E_aY%3D/110x0:700x393/1200x800/data/photo/2024/04/10/66167237ed909.jpg&imgrefurl=https://travel.kompas.com/read/2024/04/10/190500527/daya-tarik-dan-aktivitas-wisata-di-curug-leuwi-lieuk-bogor?page%3Dall&h=800&w=1200&tbnid=BizG6EDehDsFIM&tbnh=183&tbnw=275&osm=1&lns_uv=1&source=lens-native&docid=x39OguskAIVjXM"><img src="img/Spot10.jpg" alt="Curug Bogor"></a>  
         <p>Curug Bogor</p>
     </div>
 
