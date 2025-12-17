@@ -69,7 +69,7 @@ body {
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.55),
             rgba(0, 0, 0, 0.55)),
-        url('kota_bogor.webp') center/cover no-repeat;
+        url('../kota-bogor.jpg') center/cover no-repeat;
 
     height: 520px;
     color: white;
@@ -320,6 +320,7 @@ body {
     width: 73%;
     border-radius: 10px;
     display: block;
+    height: 25rem;
 }
 
 .info-column {
