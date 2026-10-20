@@ -525,109 +525,113 @@ body {
     margin-top: 10px;
 }
 
-footer {
-    background: #064bb8; /* Warna biru gelap */
-    padding: 30px 45px 10px 45px; /* Padding atas-bawah dan samping */
+footer.footer {
+    background: #1f7aff;
+    padding: 40px 20px;
     color: white;
-    /* text-align: center; /* Hapus karena menggunakan flexbox/grid */
-    font-family: Arial, sans-serif;
+    margin-top: 30px;
 }
 
-/* Kontainer Utama untuk 3 Kolom */
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Menjaga jarak antar kolom */
-    align-items: flex-start; /* Meratakan konten dari atas */
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Garis pemisah atas copyright */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* --- Kolom 1: Kontak Info --- */
+/* K O L O M   K I R I */
 .contact-info {
-    flex-basis: 35%; /* Mengambil porsi lebar yang lebih besar */
+    width: 33%;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-.icon-footer {
-    width: 25px; /* Ukuran ikon */
-    height: 25px;
-    background: #ffcc00; /* Latar belakang kuning untuk ikon */
-    padding: 5px;
-    border-radius: 5px;
-    margin-right: 15px;
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background: #ffe000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: black;
+    margin-right: 12px;
 }
 
-.contact-item .label {
+.icon-circle.danger {
+    background: #ff6b00;
+    color: white;
+}
+
+.contact-details .label {
+    font-weight: 600;
     font-size: 14px;
-    display: block;
-    font-weight: 300;
 }
 
-.contact-item .value {
-    font-size: 16px;
-    font-weight: bold;
+.contact-details .value {
+    font-size: 13px;
     display: block;
 }
 
-/* Styling khusus untuk Panggilan Darurat */
-.danger-call .icon-footer {
-    background: #ff4500; /* Warna merah/oranye untuk peringatan */
-}
 
-/* --- Kolom 2: Alamat dan Sosial Media --- */
+
+/* K O L O M   T E N G A H */
 .address-social {
-    flex-basis: 30%;
+    width: 33%;
 }
 
-.kontak-resmi p {
-    margin-bottom: 5px;
+.social-links a {
+    margin-right: 15px;
+    font-size: 22px;
+    color: white;
+    transition: 0.2s;
 }
 
-.social-links {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
+.social-links a:hover {
+    opacity: 0.7;
 }
 
-.social-icon {
-    width: 35px; /* Ukuran ikon sosial media */
-    height: 35px;
-    border-radius: 50%; /* Membuat ikon bulat */
-    /* Tambahkan latar belakang ikon sosial media jika perlu */
-}
 
-/* --- Kolom 3: Logo dan Deskripsi --- */
 .logo-description {
-    flex-basis: 30%;
+    width: 33%;
     display: flex;
-    align-items: flex-start; /* Sesuaikan perataan agar logo sejajar dengan teks */
-    gap: 15px;
+    align-items: center;      
+    text-align: center;      
+    gap: 12px;
+    justify-content: center;
+    margin-top: 4rem;
 }
 
-.desa-logo {
-    width: 60px; /* Ukuran logo */
+.logo-box img {
+    width: 70px;
     height: auto;
 }
 
+.logo-box {
+    width: 70px;
+    height: 70px;
+    background: white;
+    color: #1f7aff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 40px;
+}
+
 .logo-text p {
-    line-height: 1.4;
     margin: 0;
-}
-
-.logo-text strong {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* --- Copyright Bar --- */
-.footer-copyright {
-    text-align: center;
-    padding: 10px 0;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
 }
+
+.logo-text {
+    text-align: left; 
+}
+
