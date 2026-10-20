@@ -1,206 +1,263 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kota Bogor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kota Bogor</title>
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f7f7f7;
-    }
-
-    
-.header {
-    padding: 15px 20px 10px; 
-}
-
-.header h2 {
-    margin: 0 0 5px 0;       
-    font-size: 18px;
-    font-weight: 600;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
 
 
-    
-.container {
-    padding: 20px;
-    display: flex;
-    gap: 20px;
-    align-items: stretch; 
-}
-.container img {
-    width: 45%;
-    height: 220px;          
-    object-fit: cover;
-    border-radius: 5px;
-}
-.text-box {
-    width: 55%;
-    max-width: 520px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-}
-.text-box h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 4px 0; 
-}
+        .header {
+            padding: 15px 20px 10px;
+        }
 
-.text-box p {
-    font-size: 16px;     
-    line-height: 1.8;
-    color: #333;
-    margin: 0;
-    text-align: justify;
-}
-    
-    .visi-misi {
-        background: #4ea3a8;
-        color: white;
-        padding: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    .visi, .misi {
-        width: 45%;
-    }
-    .visi-box {
-        border: 2px solid white;
-        padding: 15px;
-        border-radius: 3px;
-        width: 80%;
-    }
-
-    .btn-view {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #2167ff;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 4px;
-    }
-.navbar {
-    width: 100%;
-    height: 70px;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #1f3c88;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.logo {
-    width: 2rem;
-}
-
-.nav-title h3 {
-    margin: 0;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.nav-title span {
-    margin: 0;
-    color: #dce3ff;
-    font-size: 12px;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-right: 5rem;
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.nav-menu li a:hover {
-    color: #9bbcff;
-}
-    
-.section-title {
-    background: #77a8c5;
-    padding: 6px 14px;
-    width: fit-content;
-    margin: 25px 0 8px 20px; 
-    font-weight: bold;
-    border-radius: 4px;
-}
+        .header h2 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
 
 
-.program-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
 
-    max-width: 1150px;   
-    margin-left: 20px;
-    margin-right: 20px;
-}
+        .container {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+            margin-top: 1rem;
+        }
+
+        .container img {
+            width: 45%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .text-box {
+            width: 55%;
+            max-width: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .text-box h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+
+        .text-box p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .visi-misi {
+            background: #4ea3a8;
+            color: white;
+            padding: 30px;
+            margin: 18px;
+            border-radius: 11px;
+        }
+
+        .visi,
+        .misi {
+            width: 45%;
+        }
+
+        .visi-box {
+            border: 2px solid white;
+            padding: 15px;
+            border-radius: 3px;
+            width: 80%;
+        }
+
+        .btn-view {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #2167ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .detail {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .detail-box {
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .visi-detail {
+            background: #6fbf9b;
+            color: #fff;
+        }
+
+        .misi-detail {
+            background: #c9e7a5;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .ringkas {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .btn-view,
+        .btn-back {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-view {
+            background: #2b7cff;
+            color: #fff;
+        }
+
+        .btn-back {
+            background: #2b7cff;
+            color: #fff;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1f3c88;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 2rem;
+        }
+
+        .nav-title h3 {
+            margin: 0;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav-title span {
+            margin: 0;
+            color: #dce3ff;
+            font-size: 12px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin-right: 5rem;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-menu li a:hover {
+            color: #9bbcff;
+        }
+
+        .section-title {
+            background: #77a8c5;
+            padding: 6px 14px;
+            width: fit-content;
+            margin: 25px 0 8px 20px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
 
 
-.program-item {
-    width: 100%;        
-    text-align: center;
-}
+        .program-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
 
-.program-item img {
-    width: 100%;        
-    height: 200px;      
-    object-fit: cover;
-    border-radius: 6px;
-}
+            max-width: 1150px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
 
 
-    
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+        .program-item {
+            width: 100%;
+            text-align: center;
+        }
 
-    max-width: 1150px;   
-    margin-left: 20px;   
-    margin-right: 20px;
-}
+        .program-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
 
-.gallery-item {
-    width: 100%;
-    text-align: center;
-}
 
-.gallery-item img {
-    width: 100%;
-    height: 200px;       
-    object-fit: cover;
-    border-radius: 6px;
-}
 
-</style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+            max-width: 1150px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    </style>
 </head>
+
 <body>
-      <header class="navbar">
+    <header class="navbar">
         <div class="nav-left">
             <img src="img/logo.png" class="logo">
             <div class="nav-title">
@@ -220,107 +277,151 @@
     </header>
 
 
-<div class="header">
-    <h2>Kota Bogor</h2>
-    <div class="header-img" style="background-image:url('GANTI-DENGAN-GAMBAR-HEADER.jpg');"></div>
-</div>
-
-
-
-
-<div class="container">
-    <img src="img/Spot1.jpg" alt="Gambar Sejarah">
-
-    <div class="text-box">
-        <h3>Sejarah</h3>
-        <p>
-            Kota Bogor dahulu merupakan pusat Kerajaan Sunda bernama Pakuan Pajajaran pada abad ke-14 hingga 
-            16, dipimpin raja terkenal Prabu Siliwangi. Setelah kerajaan runtuh, wilayah ini sempat ditinggalkan 
-            hingga masa kolonial Belanda. Pada tahun 1752, Belanda mendirikan kota bernama Buitenzorg dan 
-            membangun Istana Bogor sebagai tempat peristirahatan.
-        </p>
+    <div class="header">
+        <h2>Kota Bogor</h2>
+        <div class="header-img" style="background-image:url('GANTI-DENGAN-GAMBAR-HEADER.jpg');"></div>
     </div>
-</div>
 
 
 
-<div class="visi-misi">
-    <div class="visi">
-        <h3>Visi</h3>
-        <div class="visi-box">
-            <p><b>"Bogor Beres – Bogor Maju"</b></p>
+
+    <div class="container">
+        <img src="img/Spot1.jpg" alt="Gambar Sejarah">
+
+        <div class="text-box">
+            <h3>Sejarah</h3>
+            <p>
+                Kota Bogor dahulu merupakan pusat Kerajaan Sunda bernama Pakuan Pajajaran pada abad ke-14 hingga
+                16, dipimpin raja terkenal Prabu Siliwangi. Setelah kerajaan runtuh, wilayah ini sempat ditinggalkan
+                hingga masa kolonial Belanda. Pada tahun 1752, Belanda mendirikan kota bernama Buitenzorg dan
+                membangun Istana Bogor sebagai tempat peristirahatan.
+            </p>
         </div>
     </div>
 
-    <div class="misi">
-        <h3>Misi</h3>
-        <ol>
-            <li>Mewujudkan Kota yang Sehat</li>
-            <li>Mewujudkan Kota yang Cerdas</li>
-        </ol>
-        <button class="btn-view">View All</button>
-    </div>
-</div>
 
 
+    <div class="visi-misi">
+        <div class="ringkas" id="ringkas">
+            <div class="visi">
+                <h3>Visi</h3>
+                <div class="visi-box">
+                    <p><b>"Bogor Beres – Bogor Maju"</b></p>
+                </div>
+            </div>
 
-<div class="section-title">Program Andalan</div>
+            <div class="misi">
+                <h3>Misi</h3>
+                <ol>
+                    <li>Mewujudkan Kota yang Sehat</li>
+                    <li>Mewujudkan Kota yang Cerdas</li>
+                </ol>
+                <button class="btn-view" onclick="showDetail()">View All</button>
+            </div>
+        </div>
 
-<div class="program-wrapper">
-    <div class="program-item">
-      <a href="https://share.google/images/REiVsYbKUCOmlIsFF"><img src="img/Spot2.jpg" alt="Posyandu"></a>
-        <p>POSYANDU</p>
-    </div>
+        <div class="detail" id="detail">
+            <div class="detail-box visi-detail">
+                <h4>Visi</h4>
+                <p>
+                    Visi ini menggambarkan keinginan agar Kota Bogor menjadi kota
+                    yang tertata baik dari segi pelayanan, infrastruktur
+                    pemerintahan, serta siap menghadapi tantangan ke depan.
+                </p>
+            </div>
 
-    <div class="program-item">
-      <a href=" https://www.its.ac.id/news/wp-content/uploads/sites/2/2017/11/Rektor-ITS-Prof-Joni-Hermana-melakukan-penanaman-bibit-pohon-sebagai-simbol-dimulainya-kegiatan-Go-Green-ITS-4.jpeg."><img src="img/Spot3.jpeg" alt="Go Green"></a>  
-        <p>GO GREEN</p>
-    </div>
+            <div class="detail-box misi-detail">
+                <h4>Misi</h4>
+                <p>
+                    Bogor Cerdas dengan pengembangan smart city, fasilitas publik
+                    digital, CCTV, serta infrastruktur penunjang lainnya.
+                    Bogor Sejahtera dengan keberpihakan kepada UMKM dan industri kreatif.
+                </p>
+            </div>
 
-    <div class="program-item">
-      <a href="https://share.google/images/6ZunXw7vF5qIpZYxE"><img src="img/Spot4.webp" alt="Bansos"></a>  
-        <p>BANSOS</p>
-    </div>
-</div>
+            <button class="btn-back" onclick="hideDetail()">Kembali</button>
+        </div>
 
-
-
-<div class="section-title">Galeri</div>
-
-<div class="gallery-grid">
-
-    <div class="gallery-item">
-      <a href="https://www.google.com/imgres?imgurl=https://img.inews.co.id/media/600/files/networks/2021/12/17/2c913_alun-alun.jpg&imgrefurl=https://bogor.inews.id/read/23770/alun-alun-kota-bogor-fasilitasnya-bikin-tercengang-begini-bentuknya&h=450&w=600&tbnid=R2P_f6VUFAsIQM&tbnh=194&tbnw=259&osm=1&lns_uv=1&source=lens-native&docid=rak3jpMpYbxpsM"><img src="img/Spot5.jpg" alt="Alun-Alun Bogor"></a>  
-        <p>Alun-Alun Kota Bogor</p>
-    </div>
-
-    <div class="gallery-item">
-      <a href="https://share.google/images/MmoL31Qh58Ni9FJUb"><img src="img/Spot6.jpeg" alt="Situ Gede"></a>  
-        <p>Situ Gede</p>
     </div>
 
-    <div class="gallery-item">
-      <a href="https://share.google/images/GFzxpRoYd4ZNI4sh7"><img src="img/Spot7.jpg" alt="Kebun Raya"></a>  
-        <p>Kebun Raya</p>
+
+
+    <div class="section-title">Program Andalan</div>
+
+    <div class="program-wrapper">
+        <div class="program-item">
+            <a href="https://share.google/images/REiVsYbKUCOmlIsFF"><img src="img/Spot2.jpg" alt="Posyandu"></a>
+            <p>POSYANDU</p>
+        </div>
+
+        <div class="program-item">
+            <a
+                href=" https://www.its.ac.id/news/wp-content/uploads/sites/2/2017/11/Rektor-ITS-Prof-Joni-Hermana-melakukan-penanaman-bibit-pohon-sebagai-simbol-dimulainya-kegiatan-Go-Green-ITS-4.jpeg."><img
+                    src="img/Spot3.jpeg" alt="Go Green"></a>
+            <p>GO GREEN</p>
+        </div>
+
+        <div class="program-item">
+            <a href="https://share.google/images/6ZunXw7vF5qIpZYxE"><img src="img/Spot4.webp" alt="Bansos"></a>
+            <p>BANSOS</p>
+        </div>
     </div>
 
-    <div class="gallery-item">
-      <a href="https://share.google/images/zgt4HlqYEXSHyHcvM"><img src="img/Spot8.jpeg" alt="Perpustakaan"></a>  
-        <p>Perpustakaan dan Galeri Kota Bogor</p>
+
+
+    <div class="section-title">Galeri</div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <a
+                href="https://www.google.com/imgres?imgurl=https://img.inews.co.id/media/600/files/networks/2021/12/17/2c913_alun-alun.jpg&imgrefurl=https://bogor.inews.id/read/23770/alun-alun-kota-bogor-fasilitasnya-bikin-tercengang-begini-bentuknya&h=450&w=600&tbnid=R2P_f6VUFAsIQM&tbnh=194&tbnw=259&osm=1&lns_uv=1&source=lens-native&docid=rak3jpMpYbxpsM"><img
+                    src="img/Spot5.jpg" alt="Alun-Alun Bogor"></a>
+            <p>Alun-Alun Kota Bogor</p>
+        </div>
+
+        <div class="gallery-item">
+            <a href="https://share.google/images/MmoL31Qh58Ni9FJUb"><img src="img/Spot6.jpeg" alt="Situ Gede"></a>
+            <p>Situ Gede</p>
+        </div>
+
+        <div class="gallery-item">
+            <a href="https://share.google/images/GFzxpRoYd4ZNI4sh7"><img src="img/Spot7.jpg" alt="Kebun Raya"></a>
+            <p>Kebun Raya</p>
+        </div>
+
+        <div class="gallery-item">
+            <a href="https://share.google/images/zgt4HlqYEXSHyHcvM"><img src="img/Spot8.jpeg" alt="Perpustakaan"></a>
+            <p>Perpustakaan dan Galeri Kota Bogor</p>
+        </div>
+
+        <div class="gallery-item">
+            <a href="https://share.google/images/OHaJDQXZfF9poGCtg"><img src="img/Spot9.webp" alt="Puncak Bogor"></a>
+            <p>Puncak Bogor</p>
+        </div>
+
+        <div class="gallery-item">
+            <a
+                href="https://www.google.com/imgres?imgurl=https://asset.kompas.com/crops/1_AIT21DvVAGjnlsKj60FX7E_aY%3D/110x0:700x393/1200x800/data/photo/2024/04/10/66167237ed909.jpg&imgrefurl=https://travel.kompas.com/read/2024/04/10/190500527/daya-tarik-dan-aktivitas-wisata-di-curug-leuwi-lieuk-bogor?page%3Dall&h=800&w=1200&tbnid=BizG6EDehDsFIM&tbnh=183&tbnw=275&osm=1&lns_uv=1&source=lens-native&docid=x39OguskAIVjXM"><img
+                    src="img/Spot10.jpg" alt="Curug Bogor"></a>
+            <p>Curug Bogor</p>
+        </div>
+
     </div>
 
-    <div class="gallery-item">
-      <a href="https://share.google/images/OHaJDQXZfF9poGCtg"><img src="img/Spot9.webp" alt="Puncak Bogor"></a>  
-        <p>Puncak Bogor</p>
-    </div>
+    <script>
+        function showDetail() {
+            document.getElementById('ringkas').style.display = 'none';
+            document.getElementById('detail').style.display = 'block';
+        }
 
-    <div class="gallery-item">
-      <a href="https://www.google.com/imgres?imgurl=https://asset.kompas.com/crops/1_AIT21DvVAGjnlsKj60FX7E_aY%3D/110x0:700x393/1200x800/data/photo/2024/04/10/66167237ed909.jpg&imgrefurl=https://travel.kompas.com/read/2024/04/10/190500527/daya-tarik-dan-aktivitas-wisata-di-curug-leuwi-lieuk-bogor?page%3Dall&h=800&w=1200&tbnid=BizG6EDehDsFIM&tbnh=183&tbnw=275&osm=1&lns_uv=1&source=lens-native&docid=x39OguskAIVjXM"><img src="img/Spot10.jpg" alt="Curug Bogor"></a>  
-        <p>Curug Bogor</p>
-    </div>
-
-</div>
+        function hideDetail() {
+            document.getElementById('detail').style.display = 'none';
+            document.getElementById('ringkas').style.display = 'flex';
+        }
+    </script>
 
 
 </body>
+
 </html>
